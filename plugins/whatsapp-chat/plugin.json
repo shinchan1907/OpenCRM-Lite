@@ -1,0 +1,67 @@
+{
+    "name": "WhatsApp Chat Widget",
+    "description": "Add a floating WhatsApp chat button to connect with clients directly",
+    "version": "1.0.0",
+    "author": "OpenCRM Team",
+    "website": "https://opencrm.com",
+    "active": false,
+    "requires": {
+        "opencrm_version": "1.0.0",
+        "php_version": "7.4"
+    },
+    "settings": {
+        "phone_number": {
+            "type": "text",
+            "label": "WhatsApp Phone Number",
+            "description": "Your WhatsApp business number with country code (e.g., +1234567890)",
+            "required": true,
+            "default": ""
+        },
+        "welcome_message": {
+            "type": "textarea",
+            "label": "Welcome Message",
+            "description": "Default message that appears when clients click the WhatsApp button",
+            "required": false,
+            "default": "Hello! I'm interested in your services."
+        },
+        "position": {
+            "type": "select",
+            "label": "Widget Position",
+            "description": "Where to display the WhatsApp chat button",
+            "options": {
+                "bottom-right": "Bottom Right",
+                "bottom-left": "Bottom Left",
+                "top-right": "Top Right",
+                "top-left": "Top Left"
+            },
+            "default": "bottom-right"
+        },
+        "show_on_pages": {
+            "type": "multiselect",
+            "label": "Show on Pages",
+            "description": "Select which pages to display the widget",
+            "options": {
+                "dashboard": "Dashboard",
+                "clients": "Clients",
+                "tasks": "Tasks",
+                "invoices": "Invoices",
+                "all": "All Pages"
+            },
+            "default": ["all"]
+        },
+        "enabled": {
+            "type": "checkbox",
+            "label": "Enable Widget",
+            "description": "Show/hide the WhatsApp chat widget",
+            "default": true
+        }
+    },
+    "hooks": [
+        "footer_scripts",
+        "admin_settings_page"
+    ],
+    "assets": {
+        "css": ["assets/whatsapp-widget.css"],
+        "js": ["assets/whatsapp-widget.js"]
+    }
+}

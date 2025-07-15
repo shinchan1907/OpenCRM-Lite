@@ -1,0 +1,27 @@
+{
+    "name": "Modern Light",
+    "description": "A clean, modern light theme for OpenCRM Lite",
+    "version": "1.0.0",
+    "author": "OpenCRM Team",
+    "screenshot": "screenshot.png",
+    "tags": ["light", "modern", "clean"],
+    "styles": [
+        "style.css"
+    ],
+    "scripts": [
+        "theme.js"
+    ],
+    "supports": {
+        "dark_mode": false,
+        "responsive": true,
+        "rtl": false
+    },
+    "colors": {
+        "primary": "#3B82F6",
+        "secondary": "#64748B",
+        "accent": "#10B981",
+        "background": "#F8FAFC",
+        "surface": "#FFFFFF",
+        "text": "#1E293B"
+    }
+}
